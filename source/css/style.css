@@ -529,7 +529,7 @@ a.btn {
   text-align: center;
   padding-top: 50px; }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1100px) {
   .sidebar {
     width: 100%;
     position: absolute;
@@ -561,3 +561,33 @@ a.btn {
     display: grid; } }
 .sidebar__avatar {
   border-radius: 50%; }
+
+#toc {
+  display: none;
+  position: fixed;
+  right: 0;
+  width: 330px;
+  top: 61px;
+  font-size: 13px;
+  color: #2364a8;
+  box-sizing: border-box;
+  border: 1px solid #f0f0f0;
+  margin-bottom: 20px;
+  padding: 10px 15px; }
+  #toc ol {
+    padding-left: 1em; }
+  #toc a,
+  #toc a:link {
+    color: #2465a9; }
+    #toc a:hover,
+    #toc a:link:hover {
+      color: #002c58; }
+
+@media (min-width: 1100px) {
+  #toc {
+    display: block; }
+
+  .post {
+    padding-right: 330px; } }
+
+/*# sourceMappingURL=style.css.map */
