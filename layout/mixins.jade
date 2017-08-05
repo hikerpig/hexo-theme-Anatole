@@ -1,16 +1,19 @@
 mixin make_post(item, is_detail)
   .post.animated.fadeInDown
     .post-title
-      h3
-        if is_detail
+      if is_detail
+        h1
           a= item.title
-        else
+      else
+        h3
           a(href= url_for(item.path))= item.title
     if is_detail
       .post-content!= item.content
     else
       if item.feature_qimage
         img.feature_image(src=(config.qiniu.bucket + '/' + item.feature_qimage))
+      else if item.feature_image
+        img.feature_image(src=(item.feature_image))
       .post-content
         - var summary = item.summary || item.content
         p!= truncate(strip_html(summary), {length: 160})

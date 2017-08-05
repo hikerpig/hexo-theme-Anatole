@@ -622,5 +622,14 @@ a.btn {
 
   .post {
     padding-right: 330px; } }
+/* Comments */
+#comments {
+  margin: 0 30px; }
+
+@media (min-width: 1100px) {
+  #comments {
+    margin: 0 20px; } }
+.feature_image {
+  margin-top: 10px; }
 
 /*# sourceMappingURL=style.css.map */

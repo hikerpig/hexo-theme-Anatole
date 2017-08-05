@@ -35,22 +35,6 @@ block content
     if page.comments
         include partial/comments
 
-    .comments
-      #gitalk-container
 
 block body_addons
-  link(rel="stylesheet", href="https://unpkg.com/gitalk/dist/gitalk.css")
-  script(src="https://unpkg.com/gitalk/dist/gitalk.min.js")
 
-  script.
-    var gitalk = new Gitalk({
-      clientID: '0b21579fda2f1d2e73f4',
-      clientSecret: 'abc0351a314cc46bb3d58b6dad62c670c2d1e8f9',
-      repo: 'hikerpig.github.io',
-      owner: 'hikerpig',
-      admin: ['hikerpig'],
-      // facebook-like distraction free mode
-      distractionFreeMode: false
-    })
-
-gitalk.render('gitalk-container')

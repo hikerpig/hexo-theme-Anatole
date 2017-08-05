@@ -883,3 +883,18 @@ a.btn {
     padding-right: $toc-width;
   }
 }
+
+/* Comments */
+#comments {
+  margin: 0 30px;
+}
+
+@media (min-width: $breakpoint-small) {
+  #comments {
+    margin: 0 20px;
+  }
+}
+
+.feature_image {
+  margin-top: 10px;
+}
