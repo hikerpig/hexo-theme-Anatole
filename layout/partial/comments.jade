@@ -1,17 +1,25 @@
-if theme.duoshuo
+if theme.gitalk.enabled
     a#comments
-    .ds-thread(data-thread-key=page.path, data-title=page.title, data-url=page.permalink, data-author-key='1')
-    script.
-        var duoshuoQuery = {short_name:"#{theme.duoshuo}"};
-        (function() {
-            var ds = document.createElement('script');
-            ds.type = 'text/javascript';ds.async = true;
-            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-            ds.charset = 'UTF-8';
-            (document.getElementsByTagName('head')[0] 
-             || document.getElementsByTagName('body')[0]).appendChild(ds);
-        })();
+    #gitalk-container
 
+    link(rel="stylesheet", href="https://unpkg.com/gitalk/dist/gitalk.css")
+    script(src="https://unpkg.com/gitalk/dist/gitalk.min.js")
+
+    script.
+      var gitalk = new Gitalk({
+        clientID: '#{theme.gitalk.clientID}',
+        clientSecret: '#{theme.gitalk.clientSecret}',
+        repo: '#{theme.gitalk.repo}',
+        owner: '#{theme.gitalk.owner}',
+        admin: '#{theme.gitalk.admin}',
+        labels: ['Gitalk'],
+        id: '#{page.path}',
+        title: '#{page.title}',
+        // facebook-like distraction free mode
+        distractionFreeMode: false
+      })
+
+      gitalk.render('gitalk-container')
 
 if theme.disqus
     a#comments

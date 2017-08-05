@@ -5,14 +5,22 @@ description: Nothing lasts forever.
 avatar: /images/favicon.png
 
 # Social Accounts
-twitter: 
-rss: 
-weibo: 
-instagram: 
-github: 
-facebook: 
+twitter:
+rss:
+weibo:
+instagram:
+github:
+facebook:
 
 # Comment
-duoshuo: 
-disqus: 
-gentie: 
+duoshuo:
+disqus:
+gentie:
+gitalk:
+  enabled: False
+  clientID:
+  clientSecret:
+  repo: hikerpig.github.io
+  owner: hikerpig
+  admin:
+    - hikerpig
