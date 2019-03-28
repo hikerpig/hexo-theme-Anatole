@@ -23,6 +23,9 @@ html(lang="zh-CN")
     if page.mathjax
       include mathjax
 
+    if config.mermaid.enable
+      include mermaid
+
     if config.highlight.hljs
       link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/highlight.js@9.13.1/styles/atom-one-dark.css")
       script(src="https://cdn.jsdelivr.net/npm/highlight.js@9.13.1/lib/highlight.js")
