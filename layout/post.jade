@@ -9,6 +9,13 @@ block description
     - var desc = page.description || strip_html(page.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150);
     meta(name="description", content=desc)
 
+block keywords
+  if page.keywords
+      meta(name="keywords", content= page.keywords)
+  else if page.tags
+      - var tags = page.tags.sort('posts').map(function(item) { return item.name })
+      meta(name="keywords", content= tags)
+
 block content
   .autopagerize_page_element: .content: .post-page
     include mixins
