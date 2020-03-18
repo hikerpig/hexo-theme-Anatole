@@ -678,3 +678,9 @@ table tr td:last-child {
 
 .hljs.mermaid {
   background-color: #FCFCFC; }
+
+figure {
+  text-align: center; }
+
+figcaption {
+  font-size: 0.8em; }
