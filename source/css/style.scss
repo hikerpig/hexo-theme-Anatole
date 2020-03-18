@@ -140,9 +140,9 @@ a:hover, a:active {
 
 .content {
 	height: auto;
-	float: right;
+	// float: right;
 	width: 80%;
-	// margin-top:60px;
+  margin-left: 20%;
 }
 
 .sidebar-nav {
@@ -836,6 +836,7 @@ a.btn {
 		width: 100%;
 		z-index: 2;
 		position: absolute;
+    margin-left: 0;
 	}
 	.footer{
 		display: none;
@@ -852,14 +853,15 @@ a.btn {
   $toc-normal-color: #f77f35;
   $toc-hover-color: #c45612;
 
-  display: none;
   position: fixed;
   right: 0;
-  width: $toc-width;
+  z-index: 100;
+
   top: 30px;
   font-size: 13px;
   color: $toc-normal-color;
   box-sizing: border-box;
+  width: $toc-width;
 
   border: 1px solid #f0f0f0;
   margin-bottom: 20px;
@@ -877,12 +879,21 @@ a.btn {
       color: $toc-hover-color;
     }
   }
+
+  @media (max-width: $breakpoint-small) {
+    background: white;
+    position: static;
+    width: 100%;
+    // transform: translateX(90%);
+    // transition: all 0.3s ease;
+
+    &.show {
+      // transform: translateX(0);
+    }
+  }
 }
 
 @media (min-width: $breakpoint-small) {
-  #toc {
-    display: block;
-  }
   .post {
     padding-right: $toc-width;
   }

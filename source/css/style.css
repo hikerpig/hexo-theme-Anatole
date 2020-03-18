@@ -93,8 +93,8 @@ a:hover, a:active {
 /*animation ends*/
 .content {
   height: auto;
-  float: right;
-  width: 80%; }
+  width: 80%;
+  margin-left: 20%; }
 
 .sidebar-nav .nav {
   list-style: none;
@@ -586,7 +586,8 @@ a.btn {
     margin-top: 420px;
     width: 100%;
     z-index: 2;
-    position: absolute; }
+    position: absolute;
+    margin-left: 0; }
   .footer {
     display: none; } }
 
@@ -594,14 +595,14 @@ a.btn {
   border-radius: 50%; }
 
 #toc {
-  display: none;
   position: fixed;
   right: 0;
-  width: 330px;
+  z-index: 100;
   top: 30px;
   font-size: 13px;
   color: #f77f35;
   box-sizing: border-box;
+  width: 330px;
   border: 1px solid #f0f0f0;
   margin-bottom: 20px;
   padding: 10px 15px; }
@@ -613,10 +614,13 @@ a.btn {
     #toc a:hover,
     #toc a:link:hover {
       color: #c45612; }
+  @media (max-width: 1100px) {
+    #toc {
+      background: white;
+      position: static;
+      width: 100%; } }
 
 @media (min-width: 1100px) {
-  #toc {
-    display: block; }
   .post {
     padding-right: 330px; } }
 
