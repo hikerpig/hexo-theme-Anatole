@@ -8,8 +8,8 @@ html(lang="zh-CN")
     .main
       block content
 
-    script(src='//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js')
-    script(src='//cdn.jsdelivr.net/npm/jquery.appear')
+    script(src='//unpkg.com/jquery/dist/jquery.min.js')
+    script(src='//unpkg.com/jquery.appear')
 
     if theme.ga
       // Global site tag (gtag.js) - Google Analytics
@@ -27,8 +27,8 @@ html(lang="zh-CN")
       include mermaid
 
     if config.highlight.hljs
-      link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/highlight.js@9.13.1/styles/atom-one-dark.css")
-      script(src="https://cdn.jsdelivr.net/npm/highlight.js@9.13.1/lib/highlight.js")
+      link(rel="stylesheet", href="https://unpkg.com/highlight.js@9.18.1/styles/atom-one-dark.css")
+      script(src="https://unpkg.com/highlight.js@9.18.1/lib/highlight.js")
       script.
         hljs.initHighlightingOnLoad();
 

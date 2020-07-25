@@ -1,4 +1,4 @@
-script(src="https://cdn.jsdelivr.net/npm/mermaid@#{config.mermaid.version}/dist/mermaid.min.js")
+script(src="//unpkg.com/mermaid@#{config.mermaid.version}/dist/mermaid.min.js")
 script.
   if (window.mermaid) {
     mermaid.initialize({theme: "#{config.mermaid.theme || 'default'}"});
