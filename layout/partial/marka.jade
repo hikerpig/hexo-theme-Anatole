@@ -1,0 +1,18 @@
+link(rel='stylesheet', href='https://unpkg.com/marka-js@latest/dist/marka.css')
+
+script(src='https://unpkg.com/marka-js@latest/dist/marka-js.umd.js', onload='marka.onScriptLoaded(this)')
+
+style.
+  :scope {
+    --marka-link-color: #f77f35;
+  }
+  .marka-link::after {
+    vertical-align: baseline;
+  }
+
+script(type='text/javascript').
+  window.addEventListener("DOMContentLoaded", function () {
+    marka.init({
+      container: ".post",
+    });
+  });
