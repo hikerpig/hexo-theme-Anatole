@@ -1,4 +1,12 @@
 meta(charset="utf-8")
+
+// redirect to new site
+- var newPathname = page.path.replace(/\d{4}\/\d+\/\d+\/(.*)/, '$1')
+- var newUrl = 'https://www.hikerpig.cn/' + newPathname
+meta(http-equiv="refresh" content="0; url=#{newUrl}")
+meta(http-equiv="caconical" content="0; url=#{newUrl}")
+link(rel="canonical" href="#{newUrl}")
+
 meta(name="X-UA-Compatible", content="IE=edge")
 meta(name="author", content= theme.author)
 title
